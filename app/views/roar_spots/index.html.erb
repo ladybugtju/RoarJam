@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Roar Spots</h1>
+
+<table class="table table-hover table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roar_spots.each do |roar_spot| %>
+      <tr>
+        <td><%= roar_spot.name %></td>
+        <td><%= roar_spot.address %></td>
+        <td><%= roar_spot.phone %></td>
+        <td><%= roar_spot.website %></td>
+        <td><%= link_to 'Show', roar_spot, class: "btn btn-link" %></td>
+        <td><%= link_to 'Edit', edit_roar_spot_path(roar_spot), class: "btn btn-link" %></td>
+        <td><%= link_to 'Destroy', roar_spot, method: :delete, data: { confirm: 'Are you sure?', class: "btn btn-link" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Roarspot', new_roar_spot_path, class: "btn btn-link"  %>

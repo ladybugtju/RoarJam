@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @roar_spot.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @roar_spot.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @roar_spot.phone %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @roar_spot.website %>
+</p>
+
+<%= link_to 'Edit', edit_roar_spot_path(@roar_spot), class: "btn btn-link"  %> |
+<%= link_to 'Back', roar_spots_path, class: "btn btn-link"  %>
