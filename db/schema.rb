@@ -11,15 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150508221825) do
+ActiveRecord::Schema.define(version: 20150511043800) do
 
   create_table "roar_spots", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
     t.string   "phone"
     t.string   "website"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "image"
   end
 
 end

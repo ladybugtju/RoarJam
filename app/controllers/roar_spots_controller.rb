@@ -40,11 +40,14 @@ class RoarSpotsController < ApplicationController
   # PATCH/PUT /roar_spots/1
   # PATCH/PUT /roar_spots/1.json
   def update
+    puts "begin"
     respond_to do |format|
       if @roar_spot.update(roar_spot_params)
+        puts "did not fail"
         format.html { redirect_to @roar_spot, notice: 'Roar spot was successfully updated.' }
         format.json { render :show, status: :ok, location: @roar_spot }
       else
+        puts "failed"
         format.html { render :edit }
         format.json { render json: @roar_spot.errors, status: :unprocessable_entity }
       end
@@ -69,6 +72,6 @@ class RoarSpotsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def roar_spot_params
-      params.require(:roar_spot).permit(:name, :address, :phone, :website)
+      params.require(:roar_spot).permit(:name, :address, :phone, :website, :image)
     end
 end

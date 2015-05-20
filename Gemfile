@@ -49,7 +49,9 @@ group :development, :test do
 
   # Postgres database
   gem 'pg', group: :production
-
+  
+  # Cariierwave - Image
+  gem 'carrierwave'
  
 end
 

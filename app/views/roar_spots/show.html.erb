@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+
+
 <p>
   <strong>Name:</strong>
   <%= @roar_spot.name %>
@@ -19,6 +21,18 @@
   <strong>Website:</strong>
   <%= @roar_spot.website %>
 </p>
+<br>
+
+<iframe
+  width="230"
+  height="230"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCIp72jYa0FwZxNZQJGmRubpDs6bw2xCm4
+    &q=S<%= @roar_spot.address.parameterize %>&zoom=14">
+</iframe>
+
+<br>
+<br>
 
 <%= link_to 'Edit', edit_roar_spot_path(@roar_spot), class: "btn btn-link"  %> |
 <%= link_to 'Back', roar_spots_path, class: "btn btn-link"  %>
